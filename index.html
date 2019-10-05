@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="Description" content="Get some dog pics!" />
+		<title>Fido Fetch!</title>
+
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<link
+			href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body class="flex items-center justify-center">
+		<main class="px-6">
+			<h1 class="text-5xl font-bold py-4 uppercase text-center">
+				Fido Fetch! 🐶
+			</h1>
+			<div class="flex flex-col md:flex-row">
+				<form
+					id="random-dogs"
+					class="w-full md:w-1/2 p-4 bg-gray-100 border"
+				>
+					<div>
+						<label for="numdogs" class="text-gray-700">
+							How many dogs would you like?
+						</label>
+						<input
+							type="number"
+							id="numdogs"
+							class="ml-4 border px-2 py-1"
+							required
+							min="1"
+							max="50"
+						/>
+					</div>
+					<button
+						type="submit"
+						class="py-2 px-3 bg-blue-600 hover:bg-blue-400 text-white my-4 rounded"
+					>
+						Get dogs 🦴
+					</button>
+				</form>
+				<form
+					id="random-breed"
+					class="w-full md:w-1/2 p-4 mt-4 md:mt-0 md:ml-4 bg-gray-100 border"
+				>
+					<div class="flex items-center">
+						<label
+							for="dogbreed"
+							class="text-gray-700 whitespace-no-wrap"
+						>
+							Type in a dog breed
+						</label>
+						<input
+							type="text"
+							id="dogbreed"
+							class="w-full ml-4 border px-2 py-1"
+							required
+						/>
+					</div>
+					<button
+						type="submit"
+						class="py-2 px-3 bg-green-600 hover:bg-green-400 text-white my-4 rounded"
+					>
+						Get random breed 🦴
+					</button>
+				</form>
+			</div>
+			<div id="dog-results" class="flex flex-wrap justify-center"></div>
+		</main>
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>
